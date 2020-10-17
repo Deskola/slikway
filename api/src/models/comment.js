@@ -2,26 +2,26 @@
 const mongoose = require('mongoose');
 
 //Define the Job database schema
-const postSchema = new mongoose.Schema(
+const commentSchema = new mongoose.Schema(
 	{
-		title:{
+		message:{
 			type: String,
 			required: true
-		},
-		content: {
-			type: String,
-			required: true
-		},
+		},		
 		author: {
 			type: String,
 			required: true
-		}		
+		},
+		post: {
+			type: String,
+			required: true
+		},		
 	},
 	{
 		timestamps: true
 	}
 );
 
-const Post = mongoose.model('Post', postSchema);
+const Comment = mongoose.model('Comment', commentSchema);
 
-module.exports = Post
+module.exports = Comment;
