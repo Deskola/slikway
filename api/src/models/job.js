@@ -13,8 +13,7 @@ const jobSchema = new mongoose.Schema(
 			required: true
 		},
 		languages: {
-			type: String,
-			
+			type: String,			
 		},
 		duration: {
 			type: String,
@@ -25,9 +24,20 @@ const jobSchema = new mongoose.Schema(
 			required: true
 		},
 		client: {
-			type: String,
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'User',
 			required: true
 		},
+		devCount: {
+			type: Number,
+			default: 0
+		},
+		devs: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: 'User'
+			}
+		],
 	},
 	{
 		timestamps: true
@@ -36,4 +46,4 @@ const jobSchema = new mongoose.Schema(
 
 const Job = mongoose.model('Job', jobSchema);
 
-module.exports = Job
+module.exports = Job;

@@ -15,7 +15,12 @@ const chartSchema = new mongoose.Schema(
 		author: {
 			type: String,
 			required: true
-		}		
+		},
+		job: {
+			type: String,
+			required: true
+		}
+
 	},
 	{
 		timestamps: true
