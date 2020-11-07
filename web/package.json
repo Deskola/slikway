@@ -12,6 +12,7 @@
     "apollo-link-context": "^1.0.20",
     "bootstrap": "^4.5.3",
     "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
     "eslint": "^6.6.0",
     "graphql": "^15.3.0",
     "normalize.css": "^8.0.1",

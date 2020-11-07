@@ -8,6 +8,7 @@ import Profile from './profile';
 import Posts from './posts';
 import Jobs from './jobs';
 import Favorites from './favorites';
+import PostPage from './post';
 
 function Pages() {
 	return(
@@ -18,6 +19,7 @@ function Pages() {
 				<Route path='/jobs' component={Jobs} />
 				<Route path='/posts' component={Posts} />
 				<Route path='/favorites' component={Favorites} />
+				<Route path='/post/:id' component={PostPage} />
 			</Layout>			
 		</Router>
 	)

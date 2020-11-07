@@ -1,6 +1,9 @@
 import React, {useEffect} from 'react';
 
+
 import Button from '../components/Button';
+
+
 
 function Home() {
 	useEffect(() => {
